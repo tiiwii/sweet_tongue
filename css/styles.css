@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
-
 :root {
     --pink: #eec1ad;
     --black: #192a56;
@@ -27,8 +26,34 @@ html {
     scroll-behavior: smooth;
 }
 
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+    text-decoration: none;
+}
+
+.btn:hover{
+    background: var(--pink);
+    letter-spacing: .1rem;
+}
+
+section {
+    padding: 2rem 9%;
+}
+section:nth-child(even){
+    background:#eee;
+}
+
+
 header {
-    position: fixed; 
+    position: absolute; 
     top: 0; 
     left: 0;
     right: 0;
@@ -146,6 +171,46 @@ header .icons #menu-bars {
     font-size: 4rem;
 }
 
+.home .home-slider .slide{
+    display: flex;
+    align-items: center;
+    gap: 2rem; 
+    padding: 9rem 10rem 0;
+}
+
+.home .home-slider .slide .content{
+    flex:1 1 45rem;
+}
+
+.home .home-slider .slide .image{
+    flex:1 1 45rem;
+}
+
+.home .home-slider .slide .image img{
+    width: 100%;
+}
+
+.home .home-slider .slide .content span{
+    color:var(--pink);
+    font-size: 2.5rem;
+}
+
+.home .home-slider .slide .content h3{
+    color:var(--black);
+    font-size: 5rem;
+}
+
+.home .home-slider .slide .content p{
+    color:var(--light-color);
+    font-size: 2.2rem;
+    padding:.5rem 0;
+    line-height: 1.5;
+}
+
+.swiper-pagination-bullet-active{
+    background:var(--pink);
+}
+
 
 /* media queries */
 @media (max-width: 991px) {
@@ -156,6 +221,11 @@ header .icons #menu-bars {
 
     header {
         padding: 1rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+     
     }
 
 }
@@ -193,6 +263,11 @@ header .icons #menu-bars {
     #search-form #search-box {
         width: 90%;
         margin: 0 1rem;
+    }
+
+    .home .home-slider .slide {
+        flex-wrap: wrap;
+        padding: 9rem 0 0;
     }
 }
 
