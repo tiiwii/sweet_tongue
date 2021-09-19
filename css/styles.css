@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
-
 :root {
     --pink: #eec1ad;
     --black: #192a56;
@@ -47,7 +46,7 @@ html {
 section {
     padding: 2rem 9%;
 }
-section:nth-child(even){
+section:nth-child(even) {
     background: var(--icon-background);
 }
 
@@ -64,10 +63,9 @@ section:nth-child(even){
     padding-bottom: 2rem;
 }
 
-/*========== navbar ==========*/
 
 header {
-    position: fixed; 
+    position: absolute; 
     top: 0; 
     left: 0;
     right: 0;
@@ -188,7 +186,6 @@ header .icons #menu-bars {
 }
 
 /*========== dishes section ==========*/
-/* FIXME: button hover (or letter spacing but without increasing btn width) or put button below price*/
 .dishes .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
@@ -254,6 +251,46 @@ header .icons #menu-bars {
     margin-right: 1rem;
     font-size: 2.5rem;
 }
+.home .home-slider .slide{
+    display: flex;
+    align-items: center;
+    gap: 2rem; 
+    padding: 9rem 10rem 0;
+}
+
+.home .home-slider .slide .content{
+    flex:1 1 45rem;
+}
+
+.home .home-slider .slide .image{
+    flex:1 1 45rem;
+}
+
+.home .home-slider .slide .image img{
+    width: 100%;
+}
+
+.home .home-slider .slide .content span{
+    color:var(--pink);
+    font-size: 2.5rem;
+}
+
+.home .home-slider .slide .content h3{
+    color:var(--black);
+    font-size: 5rem;
+}
+
+.home .home-slider .slide .content p{
+    color:var(--light-color);
+    font-size: 2.2rem;
+    padding:.5rem 0;
+    line-height: 1.5;
+}
+
+.swiper-pagination-bullet-active{
+    background:var(--pink);
+}
+
 
 /* media queries */
 @media (max-width: 991px) {
@@ -269,6 +306,9 @@ header .icons #menu-bars {
     .dishes .box-container .box img {
         height: auto;
         width: 100%;
+    }
+    section {
+        padding: 2rem;
     }
 
 }
@@ -306,6 +346,11 @@ header .icons #menu-bars {
     #search-form #search-box {
         width: 90%;
         margin: 0 1rem;
+    }
+
+    .home .home-slider .slide {
+        flex-wrap: wrap;
+        padding: 9rem 0 0;
     }
 }
 
