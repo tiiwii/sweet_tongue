@@ -26,6 +26,8 @@ html {
     scroll-behavior: smooth;
 }
 
+
+/* ---------- buttons ---------- */
 .btn {
     margin-top: 1rem;
     display: inline-block;
@@ -43,19 +45,25 @@ html {
     letter-spacing: .1rem;
 }
 
+
+/* ---------- section basics ---------- */
 section {
     padding: 2rem 9%;
 }
+
 section:nth-child(even) {
     background: var(--icon-background);
 }
 
+
+/* ---------- heading basics ---------- */
 .sub-heading {
     text-align: center;
     color: var(--pink);
     font-size: 2rem;
     padding-top: 1rem;
 }
+
 .heading {
     text-align: center;
     color: var(--black);
@@ -64,6 +72,7 @@ section:nth-child(even) {
 }
 
 
+/* ---------- navbar ---------- */
 header {
     position: absolute; 
     top: 0; 
@@ -127,8 +136,8 @@ header .icons #menu-bars {
     display: none;
 }
 
-/*========== search ==========*/
 
+/* ---------- search ---------- */
 #search-form {
     position: fixed; 
     top: -110%; 
@@ -185,12 +194,56 @@ header .icons #menu-bars {
     font-size: 4rem;
 }
 
-/*========== dishes section ==========*/
+
+/* ---------- home section ---------- */
+.home .home-slider .slide {
+    display: flex;
+    align-items: center;
+    gap: 2rem; 
+    padding: 9rem 10rem 0;
+}
+
+.home .home-slider .slide .content {
+    flex:1 1 45rem;
+}
+
+.home .home-slider .slide .image {
+    flex:1 1 45rem;
+}
+
+.home .home-slider .slide .image img {
+    width: 100%;
+}
+
+.home .home-slider .slide .content span {
+    color:var(--pink);
+    font-size: 2.5rem;
+}
+
+.home .home-slider .slide .content h3 {
+    color:var(--black);
+    font-size: 5rem;
+}
+
+.home .home-slider .slide .content p {
+    color:var(--light-color);
+    font-size: 2.2rem;
+    padding:.5rem 0;
+    line-height: 1.5;
+}
+
+.swiper-pagination-bullet-active {
+    background:var(--pink);
+}
+
+
+/* ---------- dishes section ---------- */
 .dishes .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     gap: 1.5rem;
 }
+
 .dishes .box-container .box {
     padding: 2.5rem;
     background: var(--white);
@@ -201,6 +254,7 @@ header .icons #menu-bars {
     overflow: hidden;
     text-align: center;
 }
+
 .dishes .box-container .box .fa-heart,
 .dishes .box-container .box .fa-eye {
     position: absolute;
@@ -218,6 +272,7 @@ header .icons #menu-bars {
     background: var(--pink);
     color: var(--white);
 } 
+
 .dishes .box-container .box .fa-heart {
     right: -15rem;
 }
@@ -230,71 +285,37 @@ header .icons #menu-bars {
 .dishes .box-container .box:hover .fa-eye {
     left: 1.5rem;
 }
+
 .dishes .box-container .box img {
     height: 17rem;
     margin: 1rem 0;
 }
+
 .dishes .box-container .box h3 {
     color: var(--black);
     font-size: 2.5rem;
 }
+
 .dishes .box-container .box .stars {
     padding: 1rem 0;
 }
+
 .dishes .box-container .box .stars i {
     font-size: 1.7rem;
     color: var(--pink);
 }
+
 .dishes .box-container .box span {
     color: var(--pink);
     font-weight: bolder;
     margin-right: 1rem;
     font-size: 2.5rem;
 }
-.home .home-slider .slide{
-    display: flex;
-    align-items: center;
-    gap: 2rem; 
-    padding: 9rem 10rem 0;
-}
-
-.home .home-slider .slide .content{
-    flex:1 1 45rem;
-}
-
-.home .home-slider .slide .image{
-    flex:1 1 45rem;
-}
-
-.home .home-slider .slide .image img{
-    width: 100%;
-}
-
-.home .home-slider .slide .content span{
-    color:var(--pink);
-    font-size: 2.5rem;
-}
-
-.home .home-slider .slide .content h3{
-    color:var(--black);
-    font-size: 5rem;
-}
-
-.home .home-slider .slide .content p{
-    color:var(--light-color);
-    font-size: 2.2rem;
-    padding:.5rem 0;
-    line-height: 1.5;
-}
-
-.swiper-pagination-bullet-active{
-    background:var(--pink);
-}
 
 
-/* media queries */
+/* ---------- media queries ----------- */
+/* medium screens */
 @media (max-width: 991px) {
-
     html {
         font-size: 55%;
     }
@@ -307,14 +328,14 @@ header .icons #menu-bars {
         height: auto;
         width: 100%;
     }
+
     section {
         padding: 2rem;
     }
-
 }
 
+/* small screens */
 @media (max-width: 768px) {
-
     header .icons #menu-bars {
         display: inline-block;
     }
