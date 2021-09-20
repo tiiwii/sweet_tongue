@@ -17,7 +17,7 @@ document.querySelector("#close").onclick = () => {
 }
 
 
-/* ----------  ---------- */
+/* ---------- home swiper ---------- */
 let section = document.querySelectorAll('section');
 
 var swiper = new Swiper(".home-slider", {
@@ -34,6 +34,8 @@ var swiper = new Swiper(".home-slider", {
   loop:true,
 });
 
+
+/* ---------- review swiper ---------- */
 var swiper = new Swiper(".review-slider", {
   spaceBetween: 20,
   centeredSlides: true,
