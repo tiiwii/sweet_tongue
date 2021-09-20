@@ -507,6 +507,62 @@ header .icons #menu-bars {
 }
 
 
+/* ---------- order section ----------- */
+.order form {
+    max-width: 90rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: .1rem solid rgba(0, 0, 0, .2);
+    background: var(--white);
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+
+.order form .inputBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.order form .inputBox .input {
+    width: 49%;
+}
+
+.order form .inputBox .input span {
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+
+.order form .inputBox .input input,
+.order form .inputBox .input textarea {
+    background: var(--icon-background);
+    border: .15rem solid transparent;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    text-transform: none;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.order form .inputBox .input input:focus,
+.order form .inputBox .input textarea:focus {
+    border: .15rem solid var(--pink);
+}
+
+.order form .inputBox .input textarea {
+    height: 20rem;
+    resize: none;
+}
+
+.order form .btn {
+    margin-top: 0;
+}
+
+
 /* ---------- media queries ----------- */
 /* medium screens */
 @media (max-width: 991px) {
@@ -516,11 +572,6 @@ header .icons #menu-bars {
 
     header {
         padding: 1rem 2rem;
-    }
-
-    .dishes .box-container .box img {
-        height: auto;
-        width: 100%;
     }
 
     section {
@@ -569,3 +620,18 @@ header .icons #menu-bars {
     }
 }
 
+/* smaller screens */
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .dishes .box-container .box img {
+        height: auto;
+        width: 100%;
+    }
+
+    .order form .inputBox .input {
+        width: 100%;
+    }
+}
